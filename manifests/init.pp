@@ -53,7 +53,7 @@ class nginx {
   
   file { "${confdir}/conf.d/default.conf":
     ensure  => file,
-    content => template('nginx/vhost.conf.erb'),
+    content => template('nginx/default.conf.erb'),
     require => Package['nginx'],
     notify  => Service['nginx'],
   }
